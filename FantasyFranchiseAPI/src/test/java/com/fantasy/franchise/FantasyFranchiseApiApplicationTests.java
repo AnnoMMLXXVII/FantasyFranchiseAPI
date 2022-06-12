@@ -1,13 +1,47 @@
 package com.fantasy.franchise;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
 
-@SpringBootTest
-class FantasyFranchiseApiApplicationTests {
+import com.fantasy.franchise.controller.test.TestController;
+import com.fantasy.franchise.dao.DataAccessObject;
+import com.fantasy.franchise.dao.test.TestData;
+import com.fantasy.franchise.facade.FacadeInterface;
+import com.fantasy.franchise.facade.test.TestFacade;
+import com.fantasy.franchise.model.test.Test;
+import com.fantasy.franchise.responseMessage.ResponseMessage;
 
-	@Test
-	void contextLoads() {
+import cucumber.api.CucumberOptions;
+import io.cucumber.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+// @formatter:off
+@CucumberOptions(
+		features = "src/test/resources/features/",
+		glue = {
+				"com.fantasy.franchise.features.stepDefinitions",
+				},
+		 plugin = {
+	                "pretty",
+	                "html:target/cucumber",
+	                "json:target/cucumber.json",
+	                "junit:target/cucumber.xml",
+	                "ReXray:target/reporting.log"
+	               }
+		)
+//@formatter:on
+public class FantasyFranchiseApiApplicationTests {
+
+	private DataAccessObject<Test> dao;
+	private FacadeInterface<ResponseMessage> facade;
+	private TestController controller;
+
+	@BeforeClass
+	public void setup() {
+		TestData.initializeTestData();
+		controller = new TestController();
+		facade = new TestFacade();
+		controller = new TestController();
 	}
 
 }
