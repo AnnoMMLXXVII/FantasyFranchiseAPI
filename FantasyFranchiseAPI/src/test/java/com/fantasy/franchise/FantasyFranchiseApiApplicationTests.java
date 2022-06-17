@@ -22,26 +22,32 @@ import io.cucumber.junit.Cucumber;
 				"com.fantasy.franchise.features.stepDefinitions",
 				},
 		 plugin = {
-	                "pretty",
-	                "html:target/cucumber",
-	                "json:target/cucumber.json",
-	                "junit:target/cucumber.xml",
 	                "ReXray:target/reporting.log"
 	               }
 		)
 //@formatter:on
 public class FantasyFranchiseApiApplicationTests {
 
-	private DataAccessObject<Test> dao;
-	private FacadeInterface<ResponseMessage> facade;
-	private TestController controller;
+//	private DataAccessObject<Test> dao;
+//	private FacadeInterface<ResponseMessage> facade;
+//	private TestController controller;
 
 	@BeforeClass
 	public void setup() {
 		TestData.initializeTestData();
-		controller = new TestController();
-		facade = new TestFacade();
-		controller = new TestController();
+//		controller = new TestController();
+//		facade = new TestFacade();
+//		controller = new TestController();
+
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			public void run() {
+				try {
+
+				} catch (Exception ex) {
+
+				}
+			}
+		});
 	}
 
 }
