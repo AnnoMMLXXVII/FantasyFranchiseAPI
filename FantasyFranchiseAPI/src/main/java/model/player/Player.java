@@ -16,7 +16,7 @@ public class Player {
 	private String position;
 	private Integer height;
 	
-	Player(){
+	public Player(){
 		
 	}
 
