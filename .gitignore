@@ -1,36 +1,17 @@
-<<<<<<< HEAD
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-=======
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
+# Compiled class file
+*.class
+
 # Node artifact files
 node_modules/
 dist/
+
+#Other
+.project
 
 # Compiled Java class files
 *.class
@@ -43,6 +24,15 @@ dist/
 
 # Package files
 *.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
 # Maven
 target/
@@ -72,5 +62,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
->>>>>>> ae5053f8bb1370d33f266cc42aefa928c64bbf1a
