@@ -2,10 +2,8 @@ name: Deploy to BitBucket Remote
 on:
   push:
     branches: ["develop", "feature/*"]
-  workflow_dispatch:
 
 jobs:
-  syncrhonize_job:
     steps:
       - run:  "./.github/script/sync.sh"
         shell:  bash
