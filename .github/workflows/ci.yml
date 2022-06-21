@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to BitBucket Remote
 on:
   push:
     branches: ["develop", "feature/*"]
@@ -7,7 +7,5 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-      step:
-        script:
-          - git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git
-          - git push sync
+      steps:
+        run: "git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git;git push sync;"
