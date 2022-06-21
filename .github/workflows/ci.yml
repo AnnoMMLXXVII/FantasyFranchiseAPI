@@ -1,5 +1,5 @@
 name: CI
-on
+on:
   push:
     branches: ["develop", "feature/*"]
   workflow_dispatch:
