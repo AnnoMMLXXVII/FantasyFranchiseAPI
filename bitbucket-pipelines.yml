@@ -33,3 +33,10 @@ pipelines:
         trigger: 'manual'
         script:
           - echo "Your deployment to production script goes here..."
+clone:
+  depth: full
+pipelines:
+  default:
+    - step:
+        script:
+          - git push --mirror https://github.com/AnnoMMLXXVII/FantasyFranchiseAPI.git
