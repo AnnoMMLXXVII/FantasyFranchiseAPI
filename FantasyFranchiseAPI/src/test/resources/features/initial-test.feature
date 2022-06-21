@@ -4,7 +4,7 @@ Feature: Initial Commit for FAFR-13
     Background: Predefined Steps for Test DAO
         Given Test Data Access Object is not null
 
-    @smoke
+    @smoke1
     Scenario: Validate TestData for DataAccesObject Layer - Get All Call
         Given Test DAO get all call returns non empty list
 
