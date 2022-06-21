@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  steps:
-    - name: "Synchronize BitBucket Remote Branch"
-      run:  "./.github/scripts/sync.sh"
-      shell:  bash
+  syncrhonize_job:
+    steps:
+      - run:  "./.github/script/sync.sh"
+        shell:  bash
