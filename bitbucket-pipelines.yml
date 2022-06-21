@@ -39,4 +39,4 @@ pipelines:
   default:
     - step:
         script:
-          - git push --mirror https://github.com/AnnoMMLXXVII/FantasyFranchiseAPI.git
+          - git push --mirror github.com/AnnoMMLXXVII/FantasyFranchiseAPI.git
