@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-      steps:
+      step:
         script:
           - git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git
           - git push sync
