@@ -1,0 +1,13 @@
+name: CI
+on
+  push:
+    branches: ["develop", "feature/*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      steps:
+        script:
+          - git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git
+          - git push sync
