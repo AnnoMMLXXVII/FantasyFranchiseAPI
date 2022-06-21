@@ -1,11 +1,11 @@
-package com.fantasy.franchise.dao.test;
+package com.fafr.dao.test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 
-import com.fantasy.franchise.common.CommonUtils;
+import com.fafr.common.CommonUtils;
 import com.fantasy.franchise.model.test.Test;
 
 public class TestData {

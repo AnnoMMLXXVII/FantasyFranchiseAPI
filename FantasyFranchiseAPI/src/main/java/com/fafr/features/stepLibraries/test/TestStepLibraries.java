@@ -1,15 +1,15 @@
-package com.fantasy.franchise.features.stepLibraries.test;
+package com.fafr.features.stepLibraries.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
-import com.fantasy.franchise.dao.DataAccessObject;
-import com.fantasy.franchise.dao.test.TestDAO;
-import com.fantasy.franchise.facade.FacadeInterface;
-import com.fantasy.franchise.facade.test.TestFacade;
+import com.fafr.dao.DataAccessObject;
+import com.fafr.dao.test.TestDAO;
+import com.fafr.facade.FacadeInterface;
+import com.fafr.facade.test.TestFacade;
+import com.fafr.responseMessage.ResponseMessage;
 import com.fantasy.franchise.model.test.Test;
-import com.fantasy.franchise.responseMessage.ResponseMessage;
 
 import net.thucydides.core.annotations.Step;
 

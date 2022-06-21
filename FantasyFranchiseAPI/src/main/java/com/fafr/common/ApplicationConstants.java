@@ -1,4 +1,4 @@
-package com.fantasy.franchise.common;
+package com.fafr.common;
 
 /**
  * Class that will house a list of static constants

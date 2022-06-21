@@ -1,9 +1,9 @@
-package com.fantasy.franchise.facade;
+package com.fafr.facade;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fantasy.franchise.responseMessage.ResponseMessage;
+import com.fafr.responseMessage.ResponseMessage;
 
 public interface FacadeInterface<T> {
 

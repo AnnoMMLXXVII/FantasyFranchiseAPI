@@ -1,4 +1,4 @@
-package com.fantasy.franchise.responseMessage;
+package com.fafr.responseMessage;
 
 public class PayloadMessage<T> {
 

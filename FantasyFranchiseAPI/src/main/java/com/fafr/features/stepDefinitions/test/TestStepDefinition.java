@@ -1,11 +1,11 @@
-package com.fantasy.franchise.features.stepDefinitions.test;
+package com.fafr.features.stepDefinitions.test;
 
 import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fantasy.franchise.features.stepLibraries.test.TestStepLibraries;
+import com.fafr.features.stepLibraries.test.TestStepLibraries;
 
 import io.cucumber.java.en.Given;
 import net.thucydides.core.annotations.Steps;

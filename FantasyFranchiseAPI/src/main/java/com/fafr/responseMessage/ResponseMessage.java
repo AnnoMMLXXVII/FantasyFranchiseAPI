@@ -1,7 +1,7 @@
-package com.fantasy.franchise.responseMessage;
+package com.fafr.responseMessage;
 
-import static com.fantasy.franchise.common.ApplicationLogger.logWARN;
-import static com.fantasy.franchise.common.LogMessagesFAFR.FAFR_W_000;
+import static com.fafr.common.ApplicationLogger.logWARN;
+import static com.fafr.common.LogMessagesFAFR.FAFR_W_000;
 
 import java.io.IOException;
 import java.util.ArrayList;

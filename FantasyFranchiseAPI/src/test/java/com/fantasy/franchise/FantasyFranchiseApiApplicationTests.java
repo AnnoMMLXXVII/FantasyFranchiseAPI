@@ -3,13 +3,7 @@ package com.fantasy.franchise;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import com.fantasy.franchise.controller.test.TestController;
-import com.fantasy.franchise.dao.DataAccessObject;
-import com.fantasy.franchise.dao.test.TestData;
-import com.fantasy.franchise.facade.FacadeInterface;
-import com.fantasy.franchise.facade.test.TestFacade;
-import com.fantasy.franchise.model.test.Test;
-import com.fantasy.franchise.responseMessage.ResponseMessage;
+import com.fafr.dao.test.TestData;
 
 import cucumber.api.CucumberOptions;
 import io.cucumber.junit.Cucumber;
@@ -19,11 +13,12 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/",
 		glue = {
-				"com.fantasy.franchise.features.stepDefinitions",
+				"com.fafr.features.stepDefinitions",
+//				"src/main/java/com/fafr/features/stepDefinitions",
 				},
 		 plugin = {
 	                "ReXray:target/reporting.log"
-	               }
+	              }
 		)
 //@formatter:on
 public class FantasyFranchiseApiApplicationTests {

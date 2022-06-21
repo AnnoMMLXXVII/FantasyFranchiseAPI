@@ -1,4 +1,4 @@
-package com.fantasy.franchise.responseMessage;
+package com.fafr.responseMessage;
 
 import org.springframework.http.HttpStatus;
 

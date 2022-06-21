@@ -1,4 +1,4 @@
-package com.fantasy.franchise.dao;
+package com.fafr.dao;
 
 import java.util.List;
 import java.util.Optional;

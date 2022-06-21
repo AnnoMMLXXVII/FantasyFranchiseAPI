@@ -1,4 +1,4 @@
-package com.fantasy.franchise.dao.test;
+package com.fafr.dao.test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
-import com.fantasy.franchise.dao.DataAccessObject;
+import com.fafr.dao.DataAccessObject;
 import com.fantasy.franchise.model.test.Test;
 
 @Repository

@@ -1,11 +1,11 @@
-package com.fantasy.franchise.facade.test;
+package com.fafr.facade.test;
 
-import static com.fantasy.franchise.common.ApplicationLogger.logERROR;
-import static com.fantasy.franchise.common.ApplicationLogger.logINFO;
-import static com.fantasy.franchise.common.ApplicationLogger.logWARN;
-import static com.fantasy.franchise.common.LogMessagesFAFR.FAFR_E_000;
-import static com.fantasy.franchise.common.LogMessagesFAFR.FAFR_E_001;
-import static com.fantasy.franchise.common.LogMessagesFAFR.FAFR_W_001;
+import static com.fafr.common.ApplicationLogger.logERROR;
+import static com.fafr.common.ApplicationLogger.logINFO;
+import static com.fafr.common.ApplicationLogger.logWARN;
+import static com.fafr.common.LogMessagesFAFR.FAFR_E_000;
+import static com.fafr.common.LogMessagesFAFR.FAFR_E_001;
+import static com.fafr.common.LogMessagesFAFR.FAFR_W_001;
 
 import java.util.List;
 
@@ -13,12 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.fantasy.franchise.dao.DataAccessObject;
-import com.fantasy.franchise.dao.test.TestDAO;
-import com.fantasy.franchise.facade.FacadeInterface;
+import com.fafr.dao.DataAccessObject;
+import com.fafr.dao.test.TestDAO;
+import com.fafr.facade.FacadeInterface;
+import com.fafr.responseMessage.PayloadMessage;
+import com.fafr.responseMessage.ResponseMessage;
 import com.fantasy.franchise.model.test.Test;
-import com.fantasy.franchise.responseMessage.PayloadMessage;
-import com.fantasy.franchise.responseMessage.ResponseMessage;
 
 @Service
 public class TestFacade implements FacadeInterface<ResponseMessage> {

@@ -1,4 +1,4 @@
-package com.fantasy.franchise.common;
+package com.fafr.common;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
