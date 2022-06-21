@@ -8,8 +8,8 @@ import com.fafr.dao.DataAccessObject;
 import com.fafr.dao.test.TestDAO;
 import com.fafr.facade.FacadeInterface;
 import com.fafr.facade.test.TestFacade;
+import com.fafr.model.test.Test;
 import com.fafr.responseMessage.ResponseMessage;
-import com.fantasy.franchise.model.test.Test;
 
 import net.thucydides.core.annotations.Step;
 

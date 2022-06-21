@@ -1,4 +1,4 @@
-package com.fantasy.franchise.model.test;
+package com.fafr.model.test;
 
 import org.springframework.stereotype.Component;
 

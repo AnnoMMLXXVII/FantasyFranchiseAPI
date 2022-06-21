@@ -16,9 +16,9 @@ import org.springframework.stereotype.Service;
 import com.fafr.dao.DataAccessObject;
 import com.fafr.dao.test.TestDAO;
 import com.fafr.facade.FacadeInterface;
+import com.fafr.model.test.Test;
 import com.fafr.responseMessage.PayloadMessage;
 import com.fafr.responseMessage.ResponseMessage;
-import com.fantasy.franchise.model.test.Test;
 
 @Service
 public class TestFacade implements FacadeInterface<ResponseMessage> {

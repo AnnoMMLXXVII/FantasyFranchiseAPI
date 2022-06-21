@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Repository;
 
 import com.fafr.dao.DataAccessObject;
-import com.fantasy.franchise.model.test.Test;
+import com.fafr.model.test.Test;
 
 @Repository
 public class TestDAO implements DataAccessObject<Test> {

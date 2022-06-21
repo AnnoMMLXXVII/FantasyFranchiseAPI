@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.boot.SpringApplication;
 
 import com.fafr.common.CommonUtils;
-import com.fantasy.franchise.model.test.Test;
+import com.fafr.model.test.Test;
 
 public class TestData {
 	private static List<Test> dataSet = new ArrayList<>();
