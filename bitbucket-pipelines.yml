@@ -18,5 +18,5 @@ pipelines:
     feature/*:
       - step:
           script:
-          - git remote add github AnnoMMLXXVII@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
-          - git push github
+          - git remote add sync git@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
+          - git push sync
