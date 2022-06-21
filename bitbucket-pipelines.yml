@@ -10,7 +10,7 @@ pipelines:
     develop:
     - step:
         script:
-          - git remote add sync github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
+          - git remote add sync git@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
           - git checkout develop
           - git pull
           - git push sync develop
