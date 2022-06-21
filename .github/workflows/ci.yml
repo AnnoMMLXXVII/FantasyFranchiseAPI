@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-      steps:
-        - run: "git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git;git push sync;"
+  runs-on: ubuntu-latest
+    steps:
+      - run: "git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git;git push sync;"
