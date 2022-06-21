@@ -11,6 +11,11 @@ pipelines:
     - step:
         script:
           - git remote add sync git@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
+          - git fetch sync
+          - git remote rm sync
+    - step:
+        script:
+          - git remote add sync git@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
           - git checkout develop
           - git fetch
           - git pull
@@ -20,3 +25,4 @@ pipelines:
           script:
           - git remote add sync git@github.com:AnnoMMLXXVII/FantasyFranchiseAPI.git
           - git push sync
+   
