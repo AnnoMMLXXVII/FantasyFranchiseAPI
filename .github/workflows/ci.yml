@@ -6,4 +6,6 @@ on:
 
 jobs:
   steps:
-    - run: "git add remote sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git;git push sync;"
+    - name: "Synchronize BitBucket Remote Branch"
+      run:  "./.github/scripts/sync.sh"
+      shell:  bash
