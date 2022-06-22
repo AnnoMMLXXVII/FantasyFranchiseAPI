@@ -29,7 +29,7 @@
 # then
 #     echo "Branch ${branch} exists"
 # fi
-ssh -vT bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
-git remote add sync bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
+ssh -vT git@bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
+git remote add sync git@bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
 git remote -v;
 git push sync;
