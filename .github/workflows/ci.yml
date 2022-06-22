@@ -10,7 +10,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: 'Push'
-        uses: ./
+        uses: ctions/checkout@v2
         id: mirror-to-bitbucket
         with:
           password: ${{secrets.BITBUCKET_SECRET}}
