@@ -3,17 +3,14 @@ on:
   push:
     branches: ["develop", "feature/*"]
 jobs:
-  build:
-
+  mirror-to-bitbucket:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: "Update Index of Sync.sh"
-        shell:  bash
-        run:  "git update-index --chmod=+x ./.github/script/sync.sh"
-
-      - name: "Running Sync Script"
-        shell:  bash
-        run:  "bash ./.github/script/sync.sh"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: 'Push'
+        uses: ./
+        id: mirror-to-bitbucket
+        with:
+          password: ${{secrets.BITBUCKET_SECRET}}
