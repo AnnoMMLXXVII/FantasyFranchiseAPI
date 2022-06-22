@@ -4,6 +4,6 @@ on:
     branches: ["develop", "feature/*"]
 
 jobs:
-    steps:
-      - run:  "./.github/script/sync.sh"
-        shell:  bash
+  steps:
+    - run:  "./.github/script/sync.sh"
+      shell:  bash
