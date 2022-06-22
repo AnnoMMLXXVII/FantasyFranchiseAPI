@@ -10,6 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: "Run Script -- Sync"
+      - name: "Update Index of Sync.sh"
         shell:  bash
-        run:  "git update-index --chmod=+x ../script/sync.sh"
+        run:  "git update-index --chmod=+x ./.github/script/sync.sh"
+
+      - name: "Running Sync Script"
+        shell:  bash
+        run:  "bash ./.github/script/sync.sh"
