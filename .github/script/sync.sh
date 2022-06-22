@@ -30,6 +30,6 @@
 #     echo "Branch ${branch} exists"
 # fi
 
-git remote add sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchise.git;
+git remote add sync git@bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
 echo `git remote -v`;
 git push sync;
