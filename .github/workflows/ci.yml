@@ -3,9 +3,10 @@ on:
   push:
     branches: ["develop", "feature/*"]
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: "Mirror Push"
-      uses: actions/checkout@v2
-      run: |
-        git push --mirror bitbucket.org:AnnoMMLXXVII/FantasyFranchiseAPI.git
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Mirror Push"
+        uses: actions/checkout@v2
+        run: |
+          git push --mirror bitbucket.org:AnnoMMLXXVII/FantasyFranchiseAPI.git
