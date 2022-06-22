@@ -29,6 +29,8 @@
 # then
 #     echo "Branch ${branch} exists"
 # fi
+cat ~/.ssh/known_hosts;
+cat ~/.ssh/id_rsa.pub;
 ssh -vT git@bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
 git remote add sync git@bitbucket.org:AnnoMMLXXVII/fantasyfranchise.git;
 git remote -v;
