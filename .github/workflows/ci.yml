@@ -7,10 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: 'Push'
-        uses: actions/checkout@v2
-        id: mirror-to-bitbucket
-        with:
-          password: ${{secrets.BITBUCKET_SECRET}}
+        run: |
+          git push --mirror bitbucket.org:AnnoMMLXXVII/FantasyFranchiseAPI.git
