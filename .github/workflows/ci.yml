@@ -2,8 +2,14 @@ name: Deploy to BitBucket Remote
 on:
   push:
     branches: ["develop", "feature/*"]
-
 jobs:
-  steps:
-    - run:  "./.github/script/sync.sh"
-      shell:  bash
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: "Run Script -- Sync"
+        run:  "./.github/script/sync.sh"
+        shell:  bash
