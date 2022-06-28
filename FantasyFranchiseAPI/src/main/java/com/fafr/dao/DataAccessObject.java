@@ -3,9 +3,6 @@ package com.fafr.dao;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Generic Interface for the DAO objects
  * methods that can be resused or overridden based on desired specifications. 
@@ -16,6 +13,12 @@ import org.apache.logging.log4j.Logger;
  */
 public interface DataAccessObject<T> {
 
+	static DataAccessObject<?> instance = null;
+	
+	static DataAccessObject<?> getInstance() {
+		return instance;
+	}
+	
 	abstract List<T> getAll();
 
 	abstract T getById(String value);
