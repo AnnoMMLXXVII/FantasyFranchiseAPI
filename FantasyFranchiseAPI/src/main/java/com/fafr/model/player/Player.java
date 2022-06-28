@@ -1,4 +1,4 @@
-package model.player;
+package com.fafr.model.player;
 
 import java.util.Date;
 
@@ -16,7 +16,7 @@ public class Player {
 	private String position;
 	private Integer height;
 	
-	Player(){
+	public Player(){
 		
 	}
 
