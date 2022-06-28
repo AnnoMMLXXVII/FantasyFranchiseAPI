@@ -12,4 +12,8 @@ public class ApplicationConstants {
 	public static String DB_SECRET = "";
 	public static String DB_JDBCURL = "";
 	public static String ALL_STRING_REGEX = "\"([^\"]*)\"";
+
+	public static enum PLAYER_ATTRIBUTES {
+		ID, FIRSTNAME, LASTNAME, BIRTHDATE, WEIGHT, COLLEGE, POSITION, HEIGHT;
+	}
 }

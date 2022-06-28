@@ -1,9 +1,7 @@
-package com.fafr.dao.test;
+package com.fafr.common.testData;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.boot.SpringApplication;
 
 import com.fafr.common.CommonUtils;
 import com.fafr.model.test.Test;
@@ -40,7 +38,6 @@ public class TestData {
 					}
 				}
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			addToDataSet(sb.toString());

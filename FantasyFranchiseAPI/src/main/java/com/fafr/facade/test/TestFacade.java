@@ -111,12 +111,6 @@ public class TestFacade implements FacadeInterface<ResponseMessage> {
 	}
 
 	@Override
-	public ResponseMessage get() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public ResponseMessage create(String json) {
 		// TODO Auto-generated method stub
 		return null;

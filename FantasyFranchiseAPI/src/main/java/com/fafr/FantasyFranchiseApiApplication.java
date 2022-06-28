@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.fafr.common.testData.PlayerTestData;
-import com.fafr.dao.test.TestData;
+import com.fafr.common.testData.TestData;
 
 @SpringBootApplication
 @EnableAutoConfiguration

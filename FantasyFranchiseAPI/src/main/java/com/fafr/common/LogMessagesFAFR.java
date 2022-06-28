@@ -16,7 +16,8 @@ package com.fafr.common;
  */
 public class LogMessagesFAFR {
 	// INFO LOG MESSAGES
-
+	public static final String FAFR_I_000 = "Object has been Successfuly Created!";
+	
 	// WARNING LOG MESSAGES
 	public static final String FAFR_W_000 = "Unable to parse to JSON - using toString()";
 	public static final String FAFR_W_001 = "Data List is Empty";
@@ -24,5 +25,6 @@ public class LogMessagesFAFR {
 	// ERROR LOG MESSAGES
 	public static final String FAFR_E_000 = "Object is null";
 	public static final String FAFR_E_001 = "Incoming parameter is not valid: Null, Illegal, or Empty";
+	public static final String FAFR_E_002 = "Unable to parse JSON to Object";
 
 }
