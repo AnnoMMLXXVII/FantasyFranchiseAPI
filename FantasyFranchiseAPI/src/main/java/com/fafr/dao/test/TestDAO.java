@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.fafr.dao.DataAccessObject;
 import com.fafr.model.test.Test;
 
-@Repository
+@Repository("TestDAO")
 public class TestDAO implements DataAccessObject<Test> {
 
 	private List<Test> data;

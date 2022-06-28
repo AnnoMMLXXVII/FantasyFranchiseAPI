@@ -10,6 +10,7 @@ import static com.fafr.common.LogMessagesFAFR.FAFR_W_001;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +21,11 @@ import com.fafr.model.test.Test;
 import com.fafr.responseMessage.PayloadMessage;
 import com.fafr.responseMessage.ResponseMessage;
 
-@Service
+@Service("TestFacade")
 public class TestFacade implements FacadeInterface<ResponseMessage> {
 
 	@Autowired
+	@Qualifier("TestDAO")
 	private DataAccessObject<Test> dao;
 
 	private static TestFacade instance;
