@@ -1,16 +1,22 @@
 package com.fafr.facade.player;
 
+import static com.fafr.common.ApplicationConstants.DIGITS_ONLY_REGEX;
+import static com.fafr.common.ApplicationLogger.getLogLevel;
+import static com.fafr.common.ApplicationLogger.getLogMessage;
 import static com.fafr.common.ApplicationLogger.logERROR;
 import static com.fafr.common.ApplicationLogger.logINFO;
 import static com.fafr.common.ApplicationLogger.logWARN;
-import static com.fafr.common.LogMessagesFAFR.FAFR_I_000;
 import static com.fafr.common.LogMessagesFAFR.FAFR_E_000;
 import static com.fafr.common.LogMessagesFAFR.FAFR_E_002;
+import static com.fafr.common.LogMessagesFAFR.FAFR_I_000;
+import static com.fafr.common.LogMessagesFAFR.FAFR_I_001;
+import static com.fafr.common.LogMessagesFAFR.FAFR_I_002;
 import static com.fafr.common.LogMessagesFAFR.FAFR_W_001;
 import static com.fafr.facade.FacadeInterface.isGetByValueNotNull;
 
 import java.util.List;
 
+import org.apache.logging.log4j.Level;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -94,8 +100,8 @@ public class PlayerFacade implements FacadeInterface<ResponseMessage> {
 
 	@Override
 	public ResponseMessage create(String json) {
-		ObjectMapper mapper = new ObjectMapper();
 		Player p = null;
+		boolean isCreated = true;
 		try {
 			p = mapper.readValue(json, Player.class);
 		} catch (JsonProcessingException ex) {
@@ -103,6 +109,17 @@ public class PlayerFacade implements FacadeInterface<ResponseMessage> {
 			status = HttpStatus.BAD_REQUEST;
 			payload = new PayloadMessage<String>(String.format("Unable to parse player json: %s", ex.getMessage()));
 			logWARN(FAFR_E_002);
+			return new ResponseMessage(status, payload);
+		} finally {
+			isCreated = ((PlayerDAO) dao).create(p);
+		}
+		if (!isCreated && getLogLevel().equals(Level.WARN)) {
+			status = HttpStatus.BAD_REQUEST;
+			payload = new PayloadMessage<String>(String.format(getLogMessage()));
+			return new ResponseMessage(status, payload);
+		} else if (!isCreated && getLogLevel().equals(Level.ERROR)) {
+			status = HttpStatus.BAD_REQUEST;
+			payload = new PayloadMessage<String>(String.format(getLogMessage()));
 			return new ResponseMessage(status, payload);
 		}
 		logINFO(p.toString());
@@ -114,14 +131,76 @@ public class PlayerFacade implements FacadeInterface<ResponseMessage> {
 
 	@Override
 	public ResponseMessage delete(String json) {
-		// TODO Auto-generated method stub
-		return null;
+		ObjectMapper mapper = new ObjectMapper();
+		Player p = null;
+		boolean isRemoved = true;
+		try {
+			if (json.matches(DIGITS_ONLY_REGEX)) {
+				isRemoved = ((PlayerDAO) dao).removeById(json);
+			} else {
+				p = mapper.readValue(json, Player.class);
+				isRemoved = ((PlayerDAO) dao).remove(p);
+			}
+		} catch (JsonProcessingException ex) {
+			logERROR(ex.getMessage());
+			if (!isRemoved && getLogLevel().equals(Level.WARN)) {
+				status = HttpStatus.BAD_REQUEST;
+				payload = new PayloadMessage<String>(String.format(getLogMessage()));
+				return new ResponseMessage(status, payload);
+			} else if (!isRemoved && getLogLevel().equals(Level.ERROR)) {
+				status = HttpStatus.BAD_REQUEST;
+				payload = new PayloadMessage<String>(String.format(getLogMessage()));
+				return new ResponseMessage(status, payload);
+			}
+		}
+		status = HttpStatus.OK;
+		payload = new PayloadMessage<String>(FAFR_I_001.replace("Object", "Player"));
+		logINFO(FAFR_I_001);
+		return new ResponseMessage(status, payload);
 	}
 
 	@Override
-	public ResponseMessage remove(String json) {
-		// TODO Auto-generated method stub
-		return null;
+	public ResponseMessage update(String json) {
+		Player p = null;
+		boolean isUpdated = true;
+		try {
+			p = mapper.readValue(json, Player.class);
+		} catch (JsonProcessingException ex) {
+			logERROR(ex.getMessage());
+		} finally {
+			isUpdated = ((PlayerDAO) dao).update(p);
+		}
+		if (!isUpdated && getLogLevel().equals(Level.WARN)) {
+			status = HttpStatus.BAD_REQUEST;
+			payload = new PayloadMessage<String>(String.format(getLogMessage()));
+			return new ResponseMessage(status, payload);
+		} else if (!isUpdated && getLogLevel().equals(Level.ERROR)) {
+			status = HttpStatus.BAD_REQUEST;
+			payload = new PayloadMessage<String>(String.format(getLogMessage()));
+			return new ResponseMessage(status, payload);
+		}
+		status = HttpStatus.OK;
+		payload = new PayloadMessage<String>(FAFR_I_002.replace("Object", "Player"));
+		logINFO(FAFR_I_002);
+		return new ResponseMessage(status, payload);
+	}
+
+	@Override
+	public ResponseMessage update(String key, String json) {
+		Player p = null;
+		try {
+			p = mapper.readValue(json, Player.class);
+		} catch (JsonProcessingException ex) {
+			logERROR(ex.getMessage());
+		} finally {
+			if (!p.getId().equals(Integer.parseInt(key))) {
+				logERROR("Path Variable {id} does not match Request Body's {id}");
+				status = HttpStatus.BAD_REQUEST;
+				payload = new PayloadMessage<String>(String.format(getLogMessage()));
+				return new ResponseMessage(status, payload);
+			}
+		}
+		return update(json);
 	}
 
 }

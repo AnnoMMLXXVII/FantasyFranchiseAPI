@@ -1,6 +1,7 @@
 package com.fafr.facade;
 
 import com.fafr.responseMessage.ResponseMessage;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Facade Interface that is for the Basic CRUD Operations. MUST be implemented
@@ -13,6 +14,8 @@ import com.fafr.responseMessage.ResponseMessage;
  */
 public interface FacadeInterface<T> {
 
+	static ObjectMapper mapper = new ObjectMapper();
+	
 	/**
 	 * Simple Get ALL call which will return a list of Objects
 	 * 
@@ -43,8 +46,10 @@ public interface FacadeInterface<T> {
 	abstract T create(String json);
 
 	abstract T delete(String json);
-
-	abstract T remove(String json);
+	
+	abstract T update(String json);
+	
+	abstract T update(String key, String json);
 
 	static boolean isGetByValueNotNull(String s) {
 		if (s == null) {

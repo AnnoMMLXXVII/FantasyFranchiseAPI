@@ -123,7 +123,13 @@ public class TestFacade implements FacadeInterface<ResponseMessage> {
 	}
 
 	@Override
-	public ResponseMessage remove(String json) {
+	public ResponseMessage update(String json) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseMessage update(String key, String json) {
 		// TODO Auto-generated method stub
 		return null;
 	}
