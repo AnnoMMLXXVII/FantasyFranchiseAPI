@@ -67,4 +67,9 @@ class PlayerTest {
         boolean notFat = test.getWeight() >= 375;
         assertThat(notFat).as("Too fat").isTrue();
     }
+
+    @Test
+    void checkFirstAndLastNameNotEqual(){
+        assertThat(test.getLastName() == test.getFirstName()).as("Names are the same").isFalse();
+    }
 }
