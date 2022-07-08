@@ -80,7 +80,7 @@ public class PlayerController {
 			// TODO: Update to provide better response message regarding invalid value
 			return ResponseEntity.badRequest().body("");
 		}
-		ResponseMessage message = facade.update(json);
+		ResponseMessage message = facade.update(id, json);
 		if (message.getStatusCode().equals(200)) {
 			return ResponseEntity.ok(message.getResponseMessage());
 		}
