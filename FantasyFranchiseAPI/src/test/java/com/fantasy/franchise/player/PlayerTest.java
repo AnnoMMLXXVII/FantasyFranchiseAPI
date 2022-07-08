@@ -16,7 +16,7 @@ class PlayerTest {
     }
 
     Player test = new Player("John", "LastName", new Date(2022,01,01),
-            250, "URI", 07, "QB", 75);
+            250, "LegoLand", 07, "QB", 75);
 
     @Test
     void checkFirstNameNotNull(){
@@ -71,5 +71,11 @@ class PlayerTest {
     @Test
     void checkFirstAndLastNameNotEqual(){
         assertThat(test.getLastName() == test.getFirstName()).as("Names are the same").isFalse();
+    }
+
+    @Test
+    void checkNotTooOld(){
+        int age = 2022 - test.getBirthDate().getYear();
+        assertThat(age).as("Too old").isLessThanOrEqualTo(50);
     }
 }
