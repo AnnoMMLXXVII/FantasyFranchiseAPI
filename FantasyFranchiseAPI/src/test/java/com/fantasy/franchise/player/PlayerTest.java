@@ -78,6 +78,7 @@ class PlayerTest {
     void checkNotTooOld(){
         int age = 2022 - test.getBirthDate().getYear();
         assertThat(age).as("Too old").isLessThanOrEqualTo(50);
+        System.out.println("Test");
     }
 
 }
