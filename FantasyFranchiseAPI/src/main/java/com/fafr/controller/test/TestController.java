@@ -1,6 +1,7 @@
 package com.fafr.controller.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import com.fafr.responseMessage.ResponseMessage;
 public class TestController {
 
 	@Autowired
+	@Qualifier("TestFacade")
 	private FacadeInterface<ResponseMessage> facade;
 
 	@RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)

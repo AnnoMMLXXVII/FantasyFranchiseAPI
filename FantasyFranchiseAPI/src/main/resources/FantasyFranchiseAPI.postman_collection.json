@@ -1,0 +1,829 @@
+{
+	"info": {
+		"_postman_id": "aa37c43d-2326-454a-b1ae-7ccfd469475b",
+		"name": "FantasyFranchiseAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST-Data",
+			"item": [
+				{
+					"name": "Get All Test Data",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Char",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/char?contains=A",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"char"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Integer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/int?contains=",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"int"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Boolean",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/boolean?contains=d",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"boolean"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Short",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/short?contains=true",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"short"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Double",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/double?contains=",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"double"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Byte",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/byte?contains=4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"byte"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By String",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/string?contains=278578876678",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"string"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "278578876678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Test Data By Long",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/data/test/long?contains=asdfasd",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"data",
+								"test",
+								"long"
+							],
+							"query": [
+								{
+									"key": "contains",
+									"value": "asdfasd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Get All Players",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/9999",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by First Name",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=firstname&value=Mac",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "firstname"
+								},
+								{
+									"key": "value",
+									"value": "Mac"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Last Name",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=lastname&value=Jones",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "lastname"
+								},
+								{
+									"key": "value",
+									"value": "Jones"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by College",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=college&value=Alabama",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "college"
+								},
+								{
+									"key": "value",
+									"value": "Alabama"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Weight",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=height&value=84",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "height"
+								},
+								{
+									"key": "value",
+									"value": "84"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Height",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=weight&value=184",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "weight"
+								},
+								{
+									"key": "value",
+									"value": "184"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Position",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/search?criteria=position&value=QB",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"search"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "position"
+								},
+								{
+									"key": "value",
+									"value": "QB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Player",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9999,\r\n    \"firstName\": \"Mac\",\r\n    \"lastName\": \"Jones\",\r\n    \"position\": \"QB\",\r\n    \"college\": \"Alabama\",\r\n    \"weight\": 210,\r\n    \"height\": 743,\r\n    \"birthDate\": 7560\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Player",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9999,\r\n    \"firstName\": \"Mac\",\r\n    \"lastName\": \"Jones\",\r\n    \"position\": \"QB\",\r\n    \"college\": \"Alabama\",\r\n    \"weight\": 210,\r\n    \"height\": 743,\r\n    \"birthDate\": 7560\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/9999",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Player",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9999,\r\n    \"firstName\": \"Mac\",\r\n    \"lastName\": \"Jones\",\r\n    \"position\": \"QB\",\r\n    \"college\": \"Alabama\",\r\n    \"weight\": 210,\r\n    \"height\": 743,\r\n    \"birthDate\": 7560\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/fantasy/franchise/players/9999",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"fantasy",
+								"franchise",
+								"players",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080"
+		}
+	]
+}

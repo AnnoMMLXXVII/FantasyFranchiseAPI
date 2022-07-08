@@ -7,10 +7,11 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
+import com.fafr.common.testData.TestData;
 import com.fafr.dao.DataAccessObject;
 import com.fafr.model.test.Test;
 
-@Repository
+@Repository("TestDAO")
 public class TestDAO implements DataAccessObject<Test> {
 
 	private List<Test> data;
@@ -144,7 +145,6 @@ public class TestDAO implements DataAccessObject<Test> {
 
 	@Override
 	public boolean create(Test object) {
-
 		return false;
 	}
 

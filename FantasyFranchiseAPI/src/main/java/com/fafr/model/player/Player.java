@@ -4,9 +4,9 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Player {
+public class Player implements Comparable<Player> {
 
-	private String firstName; 
+	private String firstName;
 	private String lastName;
 	@DateTimeFormat(pattern = "MM-dd-yyyy")
 	private Date birthDate;
@@ -15,9 +15,9 @@ public class Player {
 	private Integer id;
 	private String position;
 	private Integer height;
-	
-	public Player(){
-		
+
+	public Player() {
+
 	}
 
 	public Player(String firstName, String lastName, Date birthDate, Integer weight, String college, Integer id,
@@ -170,7 +170,10 @@ public class Player {
 				+ ", weight=" + weight + ", college=" + college + ", id=" + id + ", position=" + position + ", height="
 				+ height + "]";
 	}
-	
-	
+
+	@Override
+	public int compareTo(Player o) {
+		return this.getId() - o.getId();
+	}
 
 }

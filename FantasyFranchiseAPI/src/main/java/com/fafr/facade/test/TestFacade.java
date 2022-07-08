@@ -10,6 +10,7 @@ import static com.fafr.common.LogMessagesFAFR.FAFR_W_001;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +21,11 @@ import com.fafr.model.test.Test;
 import com.fafr.responseMessage.PayloadMessage;
 import com.fafr.responseMessage.ResponseMessage;
 
-@Service
+@Service("TestFacade")
 public class TestFacade implements FacadeInterface<ResponseMessage> {
 
 	@Autowired
+	@Qualifier("TestDAO")
 	private DataAccessObject<Test> dao;
 
 	private static TestFacade instance;
@@ -109,12 +111,6 @@ public class TestFacade implements FacadeInterface<ResponseMessage> {
 	}
 
 	@Override
-	public ResponseMessage get() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public ResponseMessage create(String json) {
 		// TODO Auto-generated method stub
 		return null;
@@ -127,7 +123,13 @@ public class TestFacade implements FacadeInterface<ResponseMessage> {
 	}
 
 	@Override
-	public ResponseMessage remove(String json) {
+	public ResponseMessage update(String json) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResponseMessage update(String key, String json) {
 		// TODO Auto-generated method stub
 		return null;
 	}

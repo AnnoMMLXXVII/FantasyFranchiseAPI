@@ -15,10 +15,14 @@ public class ResponseMessage {
 
 	private List<Object> response = new ArrayList<>();
 	private StatusResponse statusMessage;
+	private String reason;
+	private Integer code;
 //	private PayloadMessage<?> payload;
 	private Object object;
 
 	public ResponseMessage(HttpStatus status, Object object) {
+//		reason = status.getReasonPhrase();
+//		code = status.value();
 		statusMessage = new StatusResponse(status);
 //		payload = new PayloadMessage<Object>(object);
 		this.object = object;
@@ -27,6 +31,7 @@ public class ResponseMessage {
 
 	private void serializeObjects() {
 		try {
+//			response.add(JSON.writeValueAsString(reason + "" + code));
 			response.add(JSON.writeValueAsString(statusMessage));
 			response.add(JSON.writeValueAsString(object));
 		} catch (IOException e) {
