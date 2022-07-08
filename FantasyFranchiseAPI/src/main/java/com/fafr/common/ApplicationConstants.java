@@ -17,4 +17,8 @@ public class ApplicationConstants {
 	public static enum PLAYER_ATTRIBUTES {
 		ID, FIRSTNAME, LASTNAME, BIRTHDATE, WEIGHT, COLLEGE, POSITION, HEIGHT;
 	}
+	
+	public enum CONFERENCES{
+		AFC,NFC;
+	}
 }
