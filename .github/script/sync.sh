@@ -1,5 +1,7 @@
 #! /bin/bash
-git remote add sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchiseapi.git;git push sync;
+git config --global core.askpass /usr/libexec/git-core/git-gui--askpass;
+git remote add sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchiseapi.git;
+git push sync;
 # if ! currentbranch=$(git symbolic-ref --short -q HEAD)
 # then
 # 	echo We are not currently on a branch.
