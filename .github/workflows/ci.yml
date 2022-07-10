@@ -10,4 +10,4 @@ jobs:
 
       - name: "Run Script -- Sync"
         shell:  bash
-        run:  "git update-index --chmod=+x ./.github/script/sync.sh;bash ./.github/script/sync.sh"
+        run:  "git update-index --chmod=+x ./.github/script/sync.sh;bash ./.github/script/sync.sh ${BITBUCKET_SECRET}"

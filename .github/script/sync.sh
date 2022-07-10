@@ -1,6 +1,6 @@
 #! /bin/bash
 git config --global core.askpass /usr/libexec/git-core/git-gui--askpass;
-git remote add sync https://AnnoMMLXXVII@bitbucket.org/AnnoMMLXXVII/fantasyfranchiseapi.git;
+git remote add sync https://AnnoMMLXXVII:$1@bitbucket.org/AnnoMMLXXVII/fantasyfranchiseapi.git;
 git push sync;
 # if ! currentbranch=$(git symbolic-ref --short -q HEAD)
 # then
