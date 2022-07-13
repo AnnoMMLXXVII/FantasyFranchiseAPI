@@ -5,6 +5,8 @@ import com.fafr.model.schedule.Schedule;
 import java.util.Map;
 
 public class Team {
+
+    // Attributes
     private String name;             // Set list
     private String city;
     private String division;       // Set list
@@ -17,6 +19,7 @@ public class Team {
     private Schedule schedule;
 
 
+    // Constructors
     public Team(String name, String city, String division, String conference, String abbreviation,
                                   int numPlayers, Schedule schedule, Map<Integer,Integer> record) {
         this.name = name;
@@ -33,6 +36,8 @@ public class Team {
 
     }
 
+
+    // Setters & Getters
     public String getName() {
         return name;
     }
@@ -96,4 +101,7 @@ public class Team {
     public void setRecord(Map<Integer, Integer> record) {
         this.record = record;
     }
+
+
+    // Methods
 }
