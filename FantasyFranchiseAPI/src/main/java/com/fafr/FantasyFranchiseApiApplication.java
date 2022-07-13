@@ -12,7 +12,8 @@ import com.fafr.common.testData.TestData;
 public class FantasyFranchiseApiApplication {
 
 	public static void main(String[] args) {
-		TestData.initializeTestData();
+		
+		//TestData.initializeTestData();
 		PlayerTestData.readPlayerCSV();
 		SpringApplication.run(FantasyFranchiseApiApplication.class, args);
 	}

@@ -21,4 +21,66 @@ public class ApplicationConstants {
 	public enum CONFERENCES{
 		AFC,NFC;
 	}
+	
+	public enum AFC_DIVISIONS{
+		AFCEAST, AFCWEST, AFCNORTH, AFCSOUTH;
+		
+	}
+	
+	public enum NFC_DIVISIONS{
+		NFCEAST, NFCWEST, NFCNORTH, NFCSOUTH;
+		
+	}
+	
+	public static enum TEAMS{
+		
+		
+		//AFC East
+		NE("New England","patriots"), BUF("Buffalo", "Bills"), MIA("Miami", "Dolphins"), NYJ("New York", "Jets"),
+		
+		//AFC West
+		KC("Kansas City","Chiefs"), DEN("Denver", "Broncos"), LAC("Los Angeles", "Chargers"), LV("Las Vegas", "Raiders"),
+		
+		//AFC North
+		CIN("Cincinnati", "Bengals"), BAL("Baltimore", "Ravens"), PIT("Pittsburgh", "Steelers"), CLE("Cleveland", "Browns"),
+		
+		//AFC South
+		IND("Indianapolis", "Colts"), TEN("Tennesee", "Titans"), HOU("Houston", "Texans"), JAG("Jacksonville", "Jaguars"),
+		
+		
+		
+		
+		//NFC East
+		WAS("Washington", "Commanders"), DAL("Dallas", "Cowboys"), PHI("Philadelphia", "Eagles"), NYG("New York", "Giants"),
+		
+		//NFC West
+		LAR("Los Angeles", "Rams"), SEA("Seattle", "Seahawks"), SF("San Francisco", "49ers"), ARI("Arizona", "Cardinals"),
+		
+		//NFC North
+		MIN("Minnesota", "Vikings"), GB("Green Bay", "Packers"), CHI("Chicago", "Bears"), DET("Detroit", "Lions"),
+		
+		//NFC South
+		CAR("Carolina", "Panthers"), NO("New Orleans", "Saints"), ATL("Atlanta", "Falcons"), TB("Tampa Bay", "Buccaneers")
+		
+		
+		
+		;
+		
+		private String location;
+		private String nickname;
+		
+		TEAMS(String location, String nickname){
+			this.location = location;
+			this.nickname = nickname;
+		}
+		
+		public String getLocation() {
+			return location;
+		}
+		
+		public String getName() {
+			return nickname;
+		}
+		
+	}
 }
