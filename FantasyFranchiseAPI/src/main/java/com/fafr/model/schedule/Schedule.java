@@ -119,7 +119,8 @@ public class Schedule {
             }
         }
 
-        return (fourGamesInConf && gamesAtHome >= 2 && gamesAway >= 2);
+        return (fourGamesInConf && gamesAtHome >= 2 && gamesAway >= 2);  // change away and home counter to find
+                                                                        // a way to track which team is home or away
     }
 
     public boolean ruleThreeFulfilled(Team thisTeam, List<Team> scheduledTeams, int gamesAtHome, int gamesAway) {
