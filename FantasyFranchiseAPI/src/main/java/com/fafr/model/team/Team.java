@@ -1,5 +1,9 @@
 package com.fafr.model.team;
 
+import com.fafr.model.schedule.Schedule;
+
+import java.util.Map;
+
 public class Team {
     private String name;             // Set list
     private String city;
@@ -7,17 +11,22 @@ public class Team {
     private String conference;    // Set list
     private String abbreviation; // Set list
 
+    private Map<Integer,Integer> record;
+
     private int numPlayers;
-    // Private Schedule schedule;
+    private Schedule schedule;
 
 
-    public Team(String name, String city, String division, String conference, String abbreviation, int numPlayers) {
+    public Team(String name, String city, String division, String conference, String abbreviation,
+                                  int numPlayers, Schedule schedule, Map<Integer,Integer> record) {
         this.name = name;
         this.city = city;
         this.division = division;
         this.conference = conference;
         this.abbreviation = abbreviation;
         this.numPlayers = numPlayers;
+        this.schedule = schedule;
+        this.record = record;
     }
 
     public Team(){
@@ -34,6 +43,14 @@ public class Team {
 
     public String getCity() {
         return city;
+    }
+
+    public Schedule getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(Schedule schedule) {
+        this.schedule = schedule;
     }
 
     public void setCity(String city) {
@@ -70,5 +87,13 @@ public class Team {
 
     public void setNumPlayers(int numPlayers) {
         this.numPlayers = numPlayers;
+    }
+
+    public Map<Integer, Integer> getRecord() {
+        return record;
+    }
+
+    public void setRecord(Map<Integer, Integer> record) {
+        this.record = record;
     }
 }
