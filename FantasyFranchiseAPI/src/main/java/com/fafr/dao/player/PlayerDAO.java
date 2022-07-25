@@ -67,11 +67,11 @@ public class PlayerDAO implements DataAccessObject<Player> {
 			return data.stream().filter(e -> (e.getLastName().equals(v))).collect(Collectors.toList());
 		case WEIGHT:
 			return data.stream().filter(e -> (e.getWeight().equals(formatToInteger(v)))).collect(Collectors.toList());
-		case COLLEGE:
-			return data.stream().filter(e -> (e.getCollege().equals(v))).collect(Collectors.toList());
-		case BIRTHDATE:
-			// TODO: Figure out format from parameter v, thenformat into MM-dd-yyyy date
-			return data.stream().filter(e -> (e.getBirthDate().equals(v))).collect(Collectors.toList());
+//		case COLLEGE:
+//			return data.stream().filter(e -> (e.getCollege().equals(v))).collect(Collectors.toList());
+//		case BIRTHDATE:
+//			// TODO: Figure out format from parameter v, thenformat into MM-dd-yyyy date
+//			return data.stream().filter(e -> (e.getBirthDate().equals(v))).collect(Collectors.toList());
 		case HEIGHT:
 			return data.stream().filter(e -> (e.getHeight().equals(formatToInteger(v)))).collect(Collectors.toList());
 		case POSITION:

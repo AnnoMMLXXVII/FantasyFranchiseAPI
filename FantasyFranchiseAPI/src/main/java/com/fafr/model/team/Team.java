@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class Team {
 
+
     // Attributes
     private String name;             // Set list
     private String city;
@@ -30,6 +31,16 @@ public class Team {
         this.numPlayers = numPlayers;
         this.schedule = schedule;
         this.record = record;
+    }
+
+    public Team(String name, String city, String division, String conference, String abbreviation,
+                int numPlayers) {
+        this.name = name;
+        this.city = city;
+        this.division = division;
+        this.conference = conference;
+        this.abbreviation = abbreviation;
+        this.numPlayers = numPlayers;
     }
 
     public Team(){
