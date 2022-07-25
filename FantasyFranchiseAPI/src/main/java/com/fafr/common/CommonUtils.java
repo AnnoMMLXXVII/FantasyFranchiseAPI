@@ -3,7 +3,7 @@ package com.fafr.common;
 import java.util.List;
 import java.util.Random;
 
-import com.fafr.model.player.Player;
+import com.fafr.model.Player;
 
 /**
  * Class that will comprise of methods that may be useful through out the entire

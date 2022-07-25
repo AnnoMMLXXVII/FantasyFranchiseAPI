@@ -1,4 +1,4 @@
-package com.fafr.dao.test;
+package com.fafr.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
-import com.fafr.common.testData.TestData;
-import com.fafr.dao.DataAccessObject;
-import com.fafr.model.test.Test;
+import com.fafr.model.Test;
+import com.fafr.testData.TestData;
 
 @Repository("TestDAO")
 public class TestDAO implements DataAccessObject<Test> {

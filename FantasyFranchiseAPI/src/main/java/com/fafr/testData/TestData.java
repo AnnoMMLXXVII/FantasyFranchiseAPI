@@ -1,10 +1,10 @@
-package com.fafr.common.testData;
+package com.fafr.testData;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.fafr.common.CommonUtils;
-import com.fafr.model.test.Test;
+import com.fafr.model.Test;
 
 public class TestData {
 	private static List<Test> dataSet = new ArrayList<>();

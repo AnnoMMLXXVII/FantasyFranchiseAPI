@@ -1,4 +1,4 @@
-package com.fafr.model.team;
+package com.fafr.model;
 
 public class Team {
     private String name;             // Set list

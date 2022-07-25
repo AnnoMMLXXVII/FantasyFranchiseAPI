@@ -1,4 +1,4 @@
-package com.fafr.model.player;
+package com.fafr.model;
 
 import java.util.Date;
 

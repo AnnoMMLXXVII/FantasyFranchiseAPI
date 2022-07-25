@@ -1,4 +1,4 @@
-package com.fafr.facade.player;
+package com.fafr.facade;
 
 import static com.fafr.common.ApplicationConstants.DIGITS_ONLY_REGEX;
 import static com.fafr.common.ApplicationLogger.getLogLevel;
@@ -23,9 +23,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.fafr.dao.DataAccessObject;
-import com.fafr.dao.player.PlayerDAO;
-import com.fafr.facade.FacadeInterface;
-import com.fafr.model.player.Player;
+import com.fafr.dao.PlayerDAO;
+import com.fafr.model.Player;
 import com.fafr.responseMessage.PayloadMessage;
 import com.fafr.responseMessage.ResponseMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;

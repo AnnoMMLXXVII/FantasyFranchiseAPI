@@ -1,4 +1,4 @@
-package com.fafr.facade.test;
+package com.fafr.facade;
 
 import static com.fafr.common.ApplicationLogger.logERROR;
 import static com.fafr.common.ApplicationLogger.logINFO;
@@ -15,9 +15,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.fafr.dao.DataAccessObject;
-import com.fafr.dao.test.TestDAO;
-import com.fafr.facade.FacadeInterface;
-import com.fafr.model.test.Test;
+import com.fafr.dao.TestDAO;
+import com.fafr.model.Test;
 import com.fafr.responseMessage.PayloadMessage;
 import com.fafr.responseMessage.ResponseMessage;
 

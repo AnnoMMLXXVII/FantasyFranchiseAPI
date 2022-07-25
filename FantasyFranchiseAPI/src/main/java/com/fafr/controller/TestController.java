@@ -1,4 +1,4 @@
-package com.fafr.controller.test;
+package com.fafr.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,4 +1,4 @@
-package com.fafr.dao.player;
+package com.fafr.dao;
 
 import static com.fafr.common.ApplicationLogger.logERROR;
 import static com.fafr.common.ApplicationLogger.logWARN;
@@ -16,9 +16,8 @@ import org.springframework.stereotype.Repository;
 
 import com.fafr.common.ApplicationConstants.PLAYER_ATTRIBUTES;
 import com.fafr.common.CommonUtils;
-import com.fafr.common.testData.PlayerTestData;
-import com.fafr.dao.DataAccessObject;
-import com.fafr.model.player.Player;
+import com.fafr.model.Player;
+import com.fafr.testData.PlayerTestData;
 
 @Repository("PlayerDAO")
 public class PlayerDAO implements DataAccessObject<Player> {

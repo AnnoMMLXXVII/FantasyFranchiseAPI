@@ -1,4 +1,4 @@
-package com.fafr.model.test;
+package com.fafr.model;
 
 import org.springframework.stereotype.Component;
 

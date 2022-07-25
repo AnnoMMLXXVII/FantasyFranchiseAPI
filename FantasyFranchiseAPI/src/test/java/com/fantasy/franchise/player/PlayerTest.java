@@ -7,7 +7,7 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.fafr.model.player.Player;
+import com.fafr.model.Player;
 
 class PlayerTest {
 

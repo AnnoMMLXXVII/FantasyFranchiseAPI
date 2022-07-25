@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.fafr.common.testData.PlayerTestData;
-import com.fafr.common.testData.TestData;
+import com.fafr.testData.PlayerTestData;
+import com.fafr.testData.TestData;
 
 @SpringBootApplication
 @EnableAutoConfiguration

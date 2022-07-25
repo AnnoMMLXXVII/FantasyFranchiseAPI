@@ -1,4 +1,4 @@
-package com.fafr.common.testData;
+package com.fafr.testData;
 
 import java.io.File;
 import java.io.FileReader;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fafr.model.player.Player;
+import com.fafr.model.Player;
 
 public class PlayerTestData {
 

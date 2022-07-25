@@ -1,14 +1,14 @@
-package com.fafr.features.stepLibraries.test;
+package com.fafr.features.stepLibraries;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
 import com.fafr.dao.DataAccessObject;
-import com.fafr.dao.test.TestDAO;
+import com.fafr.dao.TestDAO;
 import com.fafr.facade.FacadeInterface;
-import com.fafr.facade.test.TestFacade;
-import com.fafr.model.test.Test;
+import com.fafr.facade.TestFacade;
+import com.fafr.model.Test;
 import com.fafr.responseMessage.ResponseMessage;
 
 import net.thucydides.core.annotations.Step;

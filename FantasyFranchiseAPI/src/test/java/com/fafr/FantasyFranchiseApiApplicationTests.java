@@ -3,7 +3,7 @@ package com.fafr;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import com.fafr.common.testData.TestData;
+import com.fafr.testData.TestData;
 
 import cucumber.api.CucumberOptions;
 import io.cucumber.junit.Cucumber;

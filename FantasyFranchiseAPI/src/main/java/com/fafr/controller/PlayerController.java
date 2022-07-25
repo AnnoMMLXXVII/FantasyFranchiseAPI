@@ -1,4 +1,4 @@
-package com.fafr.controller.player;
+package com.fafr.controller;
 
 import static com.fafr.common.ApplicationConstants.PLAYER_ATTRIBUTES.ID;
 
